@@ -1,5 +1,5 @@
 :root {
-  --primary: #00b894;
+  --border-color: #00b894;
   --title-color: white;
   --text-color: #212121;
   --accent-color: #0984e3;
@@ -10,7 +10,7 @@ body {
 }
 
 div#header, div#footer {
-  background-color: var(--primary);
+  background-color: var(--border-color);
   color: var(--title-color);
 }
 
@@ -24,12 +24,16 @@ div#header, div#footer {
   text-align: left;
 }
 
+#slide0 h1 {
+  color: var(--border-color);
+}
+
 .slide .current {
   color: var(--accent-color);
 }
 
 #currentSlide {
-  color: var(--title-color)
+  color: var(--title-color);
 }
 
 .slide {
