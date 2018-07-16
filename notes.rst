@@ -14,20 +14,6 @@ Surviving Without Storage
 
 
 
-What does Diskless mean ?
-===============================
-
-.. class:: incremental
-
-* Computer (nodes) without storage (HDD / SSD)
-
-* Impossible to boot from a local OS
-
-* Impossible to save data on the computer
-
-* Solution: Network Booting / Storage
-
-
 Terms used in the presentation
 ================================
 
@@ -43,6 +29,22 @@ Slave / Client
 
 Master / Server
   A node that will allow slaves to boot and store data
+
+
+
+What does Diskless mean ?
+===============================
+
+.. class:: incremental
+
+* Node without storage (HDD / SSD)
+
+* Impossible to boot from a local OS
+
+* Impossible to save data on the computer
+
+* Solution: Network Booting / Storage
+
 
 
 Why use Diskless Linux
@@ -86,21 +88,13 @@ There a multiple DFS today:
   * GlusterFS (Epita, before OpenAFS)
   * OpenAFS (Epita)
 
+Diskless Boot - Boot image
+===========================
 
-PXE
-====
+The slave needs an image to boot on. It is usually transfered by the
+master by TFTP (Trivial File Transfer Protocol)
 
-  The Preboot eXecution Environment (PXE, sometimes pronounced as pixie)
-  specification describes a standardized client-server
-  environment that boots a software assembly,
-  retrieved from a network, on PXE-enabled clients
+Usually not the actual OS, but a boot manager with more
+advanced networking capabilities.
 
-  - Wikipedia
-
-
-
-Slave Configuration
-======================
-
-The slave's BIOS needs to register the networking card as a bootable
-drive
+The actual OS can then be downloaded via HTTP, Bittorent, [S]FTP...
