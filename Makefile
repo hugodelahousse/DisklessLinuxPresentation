@@ -1,6 +1,12 @@
-all: slides.html
+THEME_URL="ui/yaka"
+OPTIONS=--theme-url ${THEME_URL} --no-compact-list --current-slide
 
-slides: slides.html
+INPUT_FILE=notes.rst
+OUTPUT_FILE=slides.html
 
-slides.html: notes.rst
-	rst2s5.py notes.rst slides.html --theme-url ui/yaka
+all: slides
+
+slides: ${OUTPUT_FILE}
+
+${OUTPUT_FILE}: ${INPUT_FILE}
+	rst2s5.py ${OPTIONS} $^ $@
