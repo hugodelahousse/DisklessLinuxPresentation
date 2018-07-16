@@ -1,0 +1,52 @@
+:root {
+  --primary: #00b894;
+  --title-color: white;
+  --text-color: #212121;
+  --accent-color: #0984e3;
+}
+
+body {
+  color: var(--text-color);
+}
+
+div#header, div#footer {
+  background-color: var(--primary);
+  color: var(--title-color);
+}
+
+.slide h1, .footer h1 {
+  background: none;
+  color: var(--title-color);
+  left: 0.45em;
+}
+
+#slide0 * {
+  text-align: left;
+}
+
+.slide .current {
+  color: var(--accent-color);
+}
+
+#currentSlide {
+  color: var(--title-color)
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  justify-content: center;
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.slide ul {
+  align-self: center;
+}
+
+
+dt {
+  font-weight: bold;
+}
