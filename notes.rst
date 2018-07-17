@@ -1,4 +1,3 @@
-.. include:: <s5defs.txt>
 .. |date| date:: %Y/%m/%d
 .. |time| date:: %H:%M
 
@@ -9,6 +8,7 @@
 -------------------------
 Surviving Without Storage
 -------------------------
+
 :Authors:
   Hugo Delahousse
 
@@ -35,7 +35,7 @@ Master / Server
 What does Diskless mean ?
 ===============================
 
-.. class:: incremental
+
 
 * Node without storage (HDD / SSD)
 
@@ -50,7 +50,7 @@ What does Diskless mean ?
 Why use Diskless Linux
 =======================
 
-.. class:: incremental
+
 
 * Automatic propagation of software changes to the slave nodes
 
@@ -59,7 +59,7 @@ Why use Diskless Linux
 Why not use remote sessions
 ============================
 
-.. class:: incremental
+
 
 * The slave uses its own RAM
 
@@ -98,3 +98,22 @@ Usually not the actual OS, but a boot manager with more
 advanced networking capabilities.
 
 The actual OS can then be downloaded via HTTP, Bittorent, [S]FTP...
+
+
+Setting up the Client
+=========================
+
+* Set the BIOS to boot on network
+
+* The network card with with PXE (or Etherboot) software in ROM
+
+  * gPXE
+
+  * iPXE
+
+Setting up the Server
+=======================
+
+* Setup DCHP and TFTP servers
+
+* Setup the DFS for the clients to use
