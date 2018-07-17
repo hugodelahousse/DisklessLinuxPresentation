@@ -59,6 +59,14 @@ What does Diskless mean ?
 * Solution: Network Booting / Storage
 
 
+Network Setup
+==============
+
+.. figure:: resources/PXE_diagram.png
+  :align: center
+
+  The network
+
 
 Why use Diskless Linux
 =======================
@@ -118,6 +126,7 @@ Without a disk, we have to use a Distributed File System (DFS)
 There a multiple DFS today:
 
   * Ceph
+  * NFS
   * GlusterFS (Epita, before OpenAFS)
   * OpenAFS (Epita)
 
@@ -165,6 +174,15 @@ PXE Process
 * [OPTIONAL] Client chooses an OS on the NBP, downloads it and boots into it
 
 
+PXE Process
+============
+
+.. figure:: resources/PXE_Process.png
+  :align: center
+
+  The boot process
+
+
 Linux and Network Booting
 ==========================
 
@@ -173,3 +191,30 @@ Linux offer multiple lightweight MBR to boot into
 * SYSLINUX -> PXELINUX
 
 * Most distributions can be loaded directly (slow) or by the NBP
+
+
+Software on linux
+==================
+
+A lot of software are available for an easy server setup on linux
+
+* dhcpd for the dhcp server
+
+* tftpd for the tfpt server
+
+* nfs-utils for the file system
+
+Useful Links
+=============
+
+.. container:: nooverlay small
+
+  * https://en.wikipedia.org/wiki/Diskless_node
+
+  * https://en.wikipedia.org/wiki/Network_booting
+
+  * https://en.wikipedia.org/wiki/Clustered_file_system#Distributed_file_systems
+
+  * https://en.wikipedia.org/wiki/Preboot_Execution_Environment
+
+  * https://wiki.archlinux.org/index.php/Diskless_system
